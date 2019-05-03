@@ -12,9 +12,13 @@ Yelp is an interesting product to take a deeper dive into because of its impact 
 
 ### What data-driven questions do you hope to answer about this domain (share at least 3)?
 - In each state, what is the most popular type of restaurant?
+  - This can be answered by using the tags associated with each business, and using its location to determine the state.
 - What is the average rating for each price bracket?
+  - There is a price range for each business so we can group all the price range for businesses and find the average rating among each price range.
 - What is the price bracket for each business tag type?
+  - There can be up to three tags for each business, so for consistency only the first tag will be used when analyzing the price bracket, which is given by Yelp, for each tag type.
 - Is there a trend between price range and average food rating?
+  - The average food rating can be grouped by each increment of half star, and the average price range for each star rating.
 
 # Finding Data
 ### Where did you download the data (e.g., a web URL)?
