@@ -22,9 +22,9 @@ Yelp is an interesting product to take a deeper dive into because of its impact 
 
 # Finding Data
 ### Where did you download the data (e.g., a web URL)?
-Web URL: https://www.yelp.com/dataset/challenge
-Web URL: https://www.kaggle.com/shrutimehta/zomato-restaurants-data
-Web URL: https://data.world/datafiniti/fast-food-restaurants-across-america
+- Web URL: https://www.yelp.com/dataset/challenge
+- Web URL: https://www.kaggle.com/shrutimehta/zomato-restaurants-data
+- Web URL: https://data.world/datafiniti/fast-food-restaurants-across-america
 
 ### How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
 - In the first dataset, the data was collected directly from Yelp. Yelp is a crowd-sourced platform who collects data from users. Users of the Yelp service will leave information such as reviews, photos, rating, and tips about the service. Yelp aggregates the data to deliver insights for their users. The data presents us data about the reviews and photos that consumers leave for company. In addition, the data also lets us additional information about each business such as address, category, and price range. While the original data was in .json form, we used Northwestern University's tool for parsing the data into a .csv file (https://github.com/vc1492a/Yelp-Challenge-Dataset).
