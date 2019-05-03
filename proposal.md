@@ -16,7 +16,7 @@ Yelp is an interesting product to take a deeper dive into because of its impact 
 - What is the average rating for each price bracket?
   - There is a price range for each business so we can group all the price range for businesses and find the average rating among each price range.
 - What is the price bracket for each business tag type?
-  - There can be up to three tags for each business, so for consistency only the first tag will be used when analyzing the price bracket, which is given by Yelp, for each tag type.
+  - There can be up to three tags for each business, so for consistency only the first tag will be used when analyzing the given price bracket for each tag type.
 - Is there a trend between price range and average food rating?
   - The average food rating can be grouped by each increment of half star, and the average price range for each star rating.
 
@@ -44,3 +44,6 @@ Web URL: https://data.world/datafiniti/fast-food-restaurants-across-america
 - Datafiniti: 10
 
 ### What questions (from above) can be answered using the data in this dataset?
+- Yelp: Most popular restaurant/type in a state, average rating for price bracket, price range for business tag, trend between price bracket and rating
+- Zomato: Most popular restaurant/type in a state, average rating for price bracket, price range for business tag, trend between price bracket and rating
+- Datafiniti: Most popular restaurant/type in a state
