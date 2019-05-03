@@ -23,10 +23,24 @@ Yelp is an interesting product to take a deeper dive into because of its impact 
 # Finding Data
 ### Where did you download the data (e.g., a web URL)?
 Web URL: https://www.yelp.com/dataset/challenge
+Web URL: https://www.kaggle.com/shrutimehta/zomato-restaurants-data
+Web URL: https://data.world/datafiniti/fast-food-restaurants-across-america
 
 ### How was the data collected or generated? Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
-- The data was collected directly from Yelp. Yelp is a crowd-sourced platform who collects data from users. Users of the Yelp service will leave information such as reviews, photos, rating, and tips about the service. Yelp aggregates the data to deliver insights for their users. The data presents us data about the reviews and photos that consumers leave for company. In addition, the data also lets us additional information about each business such as address, category, and price range.
+- In the first dataset, the data was collected directly from Yelp. Yelp is a crowd-sourced platform who collects data from users. Users of the Yelp service will leave information such as reviews, photos, rating, and tips about the service. Yelp aggregates the data to deliver insights for their users. The data presents us data about the reviews and photos that consumers leave for company. In addition, the data also lets us additional information about each business such as address, category, and price range. While the original data was in .json form, we used Northwestern University's tool for parsing the data into a .csv file (https://github.com/vc1492a/Yelp-Challenge-Dataset).
+
+- In the second dataset, the data was a side project by an individual interested in helping people find more accurate and reliable restaurant reviews. Similar to Yelp, Zomato allows customers to leave reviews with lots of different information regarding the food and servic of restaurants around the country. However, this dataset wasn't created directly by Zomato but rather by utilizing Zomato's API, and the data has been formatted into a .csv file with many different features regarding the restaurant reviews.
+
+- In the third dataset, the data was collected by data company Datafiniti. This dataset details fast food restaurants around the country and details about these restaurants. While less focused on customer reception to restaurants, the dataset reveals the distribution of such fast food restaurants geographically.
 
 ### How many observations (rows) are in your data?
+- Yelp: 72742
+- Zomato: 9551
+- Datafiniti: 10000
+
 ### How many features (columns) are in the data?
+- Yelp: 89
+- Zomato: 21
+- Datafiniti: 10
+
 ### What questions (from above) can be answered using the data in this dataset?
