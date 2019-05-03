@@ -14,7 +14,7 @@ Yelp is an interesting product to take a deeper dive into because of its impact 
 - In each state, what is the most popular type of restaurant?
 - What is the average rating for each price bracket?
 - What is the price bracket for each business tag type?
-- What is the most common business tag types among each state?
+- Is there a trend between price range and average food rating?
 
 # Finding Data
 ### Where did you download the data (e.g., a web URL)?
