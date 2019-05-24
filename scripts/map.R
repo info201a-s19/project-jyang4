@@ -1,9 +1,9 @@
 library("dplyr")
-library("ggplot")
 library("leaflet.extras")
+library("leaflet")
 
 
-Yelp_data <- read.csv("data/yelp.csv", stringsAsFactors = FALSE)
+Yelp_data <- read.csv("./data/yelp.csv", stringsAsFactors = FALSE)
 
 Vegas_Data <- Yelp_data %>% 
   filter(city == "Las Vegas" & review_count > 10) %>%
