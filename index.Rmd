@@ -1,5 +1,6 @@
 ---
 title: "How Yelp can Support a New Business"
+author: "David Chiang, Johnny Yang, Justin Bao, Siddharth Jayadev"
 date: "5/24/2019"
 output: html_document
 ---
@@ -7,10 +8,14 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library("knitr")
+library("leaflet")
+source("scripts/barchart.R")
+source("scripts/map.R")
+yelp_df <- read.csv("data/yelp.csv", stringsAsFactors = FALSE)
 ```
 
 
-##Purpose of the Project
+## Purpose of the Project
 Yelp is becoming a growing platform for digital marketing. In our current day
 and age, having a effective digital presence on the internet can be vital to the
 success of a business. Through the Yelp Dataset, we hope to be able to discover
@@ -19,6 +24,14 @@ this project, we will be specifically focusing on the city of Las Vegas and the
 Yelp data involved. The source of our data is
 [Yelp Data Set](https://www.yelp.com/dataset/challenge).
 
-##Map of Las Vegas Businesses
-`r map_of_vegas `
+## Map of Las Vegas Businesses
+```{r map, echo = FALSE, warnings = FALSE}
+map_chart(yelp_df)
+```
+
+
+## Bar chart of Price Ranges in Las Vegas
+```{r bar_chart, echo = FALSE, warnings = FALSE}
+bar_chart(yelp_df)
+```
 

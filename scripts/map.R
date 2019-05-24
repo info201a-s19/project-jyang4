@@ -30,7 +30,7 @@ map_chart <- function(df){
        values = ~Stars_rounded, # the values to label
        opacity = 1
      )
-   
+   return(map_of_vegas)
   
 }
 
