@@ -11,6 +11,7 @@ library("knitr")
 library("leaflet")
 source("scripts/barchart.R")
 source("scripts/map.R")
+source("scripts/scatterplot.R")
 yelp_df <- read.csv("data/yelp.csv", stringsAsFactors = FALSE)
 ```
 
@@ -30,8 +31,14 @@ map_chart(yelp_df)
 ```
 
 
-## Bar chart of Price Ranges in Las Vegas
+## Bar Chart of Price Ranges in Las Vegas
 ```{r bar_chart, echo = FALSE, warnings = FALSE}
 bar_chart(yelp_df)
 ```
+
+## Scatter Plot of Check-Ins Versus Reviews
+```{r bar_chart, echo = FALSE, warnings = FALSE}
+scatter_plot(yelp_df)
+```
+
 
