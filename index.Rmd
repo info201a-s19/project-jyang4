@@ -11,6 +11,7 @@ library("knitr")
 library("leaflet")
 source("scripts/barchart.R")
 source("scripts/map.R")
+source("scripts/top_1000_map.R")
 yelp_df <- read.csv("data/yelp.csv", stringsAsFactors = FALSE)
 ```
 
@@ -28,10 +29,27 @@ Yelp data involved. The source of our data is
 ```{r map, echo = FALSE, warnings = FALSE}
 map_chart(yelp_df)
 ```
+This map of Las Vegas shows the star rating of every single business on Yelp.
+The color designates the star rating for the business. It is intended to allow 
+a user to zoom into a specific are and see if it is concentrated with a specific star rating. In the future, we will be atrempting to create a shiny UI that 
+allows users to see where there are 1-star, 2-star, 3-star, 4-star, and 5-star businesses. In a broad scope, the map shows that a majority of businesses in 
+Las Vegas regardless of region is rated 4-star and 5-star
 
+## Map of Businesses with over 1000 Reviews
+```{r top_1000_map, echo= FALSE, warnings = FALSE}
+Business_with_1000_map(yelp_df)
+```
+This map of Las Vegas is filtered by businesses with over 1000 reviews in
+Las Vegas. The total number of businesses with over 1000 reviews is 
+104 businesses. When a user clicks on a point, they will get information such as 
+the name, number of check-ins, and the average star rating of the restaurant. 
+We hope that this will give the user an idea of what the top businesses in 
+Las Vegas according to Yelp would be.  We chose the map so that users can see the vicinity or area with the top businesses. 
 
 ## Bar chart of Price Ranges in Las Vegas
 ```{r bar_chart, echo = FALSE, warnings = FALSE}
 bar_chart(yelp_df)
 ```
+
+
 
