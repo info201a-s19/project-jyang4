@@ -11,7 +11,11 @@ library("knitr")
 library("leaflet")
 source("scripts/barchart.R")
 source("scripts/map.R")
+<<<<<<< HEAD
 source("scripts/top_1000_map.R")
+=======
+source("scripts/scatterplot.R")
+>>>>>>> d94e941a3218cc6df04ec9baee3f45712a29bfeb
 yelp_df <- read.csv("data/yelp.csv", stringsAsFactors = FALSE)
 ```
 
@@ -46,10 +50,17 @@ the name, number of check-ins, and the average star rating of the restaurant.
 We hope that this will give the user an idea of what the top businesses in 
 Las Vegas according to Yelp would be.  We chose the map so that users can see the vicinity or area with the top businesses. 
 
-## Bar chart of Price Ranges in Las Vegas
+## Bar Chart of Price Ranges in Las Vegas
 ```{r bar_chart, echo = FALSE, warnings = FALSE}
 bar_chart(yelp_df)
 ```
 
+<<<<<<< HEAD
+=======
+## Scatter Plot of Check-Ins Versus Reviews
+```{r bar_chart, echo = FALSE, warnings = FALSE}
+scatter_plot(yelp_df)
+```
+>>>>>>> d94e941a3218cc6df04ec9baee3f45712a29bfeb
 
 
