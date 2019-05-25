@@ -11,14 +11,11 @@ library("knitr")
 library("leaflet")
 source("scripts/barchart.R")
 source("scripts/map.R")
-<<<<<<< HEAD
 source("scripts/top_1000_map.R")
-=======
 source("scripts/scatterplot.R")
->>>>>>> d94e941a3218cc6df04ec9baee3f45712a29bfeb
+source("scripts/summary.R")
 yelp_df <- read.csv("data/yelp.csv", stringsAsFactors = FALSE)
 ```
-
 
 ## Purpose of the Project
 Yelp is becoming a growing platform for digital marketing. In our current day
@@ -28,6 +25,19 @@ insights that will help a new business be successful in their environment. For
 this project, we will be specifically focusing on the city of Las Vegas and the 
 Yelp data involved. The source of our data is
 [Yelp Data Set](https://www.yelp.com/dataset/challenge).
+
+## Summary Statistics 
+The total number of restaurants reviewed on Yelp for Las Vegas is `r restaurants_reviewed`. `r total_tip_count` people tipped in Las Vegas and North Las Vegas. The average star rating of the restaurants in Las Vegas and North Las Vegas is `r avg_star_rating`. The most reviewed restaurant was `r most_reviewed`. The summary data for price range(Min, 1st Quartile, Median, Mean, 3rd Quartile, Max, NA's) is `r summary_range`.
+
+## Summary Table by Rating
+
+The following summary table groups the data by star ratings and calculates the total number of checkins, tips and reviews. The star rating is arranged in ascending order. By arranging the data in this way we can know the summary about the various star-ratings.
+
+```{r, echo=FALSE}
+kable(star_wise, col.names = c("Rating", "Checkins" ,"Tips" , "Reviews"))
+```
+
+The most number of checkins, tips, and reviews were at restaurants with rating 4.0. This means people reviews on Yelp mostly if they find the place is worth a 4.0 rating.
 
 ## Map of Las Vegas Businesses
 ```{r map, echo = FALSE, warnings = FALSE}
@@ -58,7 +68,7 @@ bar_chart(yelp_df)
 <<<<<<< HEAD
 =======
 ## Scatter Plot of Check-Ins Versus Reviews
-```{r bar_chart, echo = FALSE, warnings = FALSE}
+```{r scatterplot.R, echo = FALSE, warnings = FALSE}
 scatter_plot(yelp_df)
 ```
 >>>>>>> d94e941a3218cc6df04ec9baee3f45712a29bfeb
