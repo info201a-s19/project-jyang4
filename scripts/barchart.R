@@ -10,10 +10,8 @@ bar_chart <- function(df) {
     filter(city == "Las Vegas" | city == "North Las Vegas") %>%
     group_by(Price_Range) %>%
     summarize(num_each_price = n())
-  
   # Removed NA values from the price_ranges data frame
   filtered_price_ranges <- na.omit(price_ranges)
-  
   chart <- ggplot(yelp_df) +
     geom_col(mapping = aes(x = "$ = Under $10",
                            y = filtered_price_ranges$num_each_price[1])) +

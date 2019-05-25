@@ -3,14 +3,13 @@ library("ggplot2")
 
 scatter_plot <- function(df){
   # Filter data for Las Vegas and filtering out outliers for proper scale
-  vegas_data <- df %>% 
+  vegas_data <- df %>%
     filter(city == "Las Vegas") %>%
     select(review_count, Number_of_Checkins, stars) %>%
     filter(Number_of_Checkins < 20000)
-  
   ggplot(data = vegas_data) +
     geom_point(
-      mapping = aes(x = Number_of_Checkins, 
+      mapping = aes(x = Number_of_Checkins,
                     y = review_count,
                     color = stars),
       alpha = .3
@@ -22,4 +21,3 @@ scatter_plot <- function(df){
       color = "Stars"
     )
 }
-

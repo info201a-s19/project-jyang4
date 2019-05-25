@@ -45,7 +45,7 @@ map_chart(yelp_df)
 ```
 This map of Las Vegas shows the star rating of every single business on Yelp.
 The color designates the star rating for the business. It is intended to allow 
-a user to zoom into a specific are and see if it is concentrated with a specific star rating. In the future, we will be atrempting to create a shiny UI that 
+a user to zoom into a specific are and see if it is concentrated with a specific star rating. In the future, we will be attempting to create a shiny UI that 
 allows users to see where there are 1-star, 2-star, 3-star, 4-star, and 5-star businesses. In a broad scope, the map shows that a majority of businesses in 
 Las Vegas regardless of region is rated 4-star and 5-star
 
@@ -65,12 +65,23 @@ Las Vegas according to Yelp would be.  We chose the map so that users can see th
 bar_chart(yelp_df)
 ```
 
+Above is a bar chart of the different price levels for businesses in the Las
+Vegas region. We included this to show prospective business owners on what 
+the most common price level is for businesses in the area. This bar graph 
+demonstrates that a majority of restaurants were in the $11-$30 range.
+
 <<<<<<< HEAD
 =======
 ## Scatter Plot of Check-Ins Versus Reviews
 ```{r scatterplot.R, echo = FALSE, warnings = FALSE}
 scatter_plot(yelp_df)
 ```
+
+We wanted to find the correlation of people that were checking into the business
+and see if they were also leaving a review. We found that a majority of the
+people that checked in did not end up leaving a review. We wanted to include 
+this to allow prospective businesses to see if running check-in promotions 
+would increase the amount of positive reviews on their Yelp profile.
 >>>>>>> d94e941a3218cc6df04ec9baee3f45712a29bfeb
 
 

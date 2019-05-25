@@ -17,8 +17,8 @@ avg_star_rating <- mean(dff$stars)
 restaurants_reviewed <- nrow(dff)
 
 # Which restaurant was reviewed the most?
-most_reviewed <- dff %>% 
-  filter(review_count == max(review_count)) %>% 
+most_reviewed <- dff %>%
+  filter(review_count == max(review_count)) %>%
   pull(name)
 
 # Summary of price range
@@ -26,5 +26,6 @@ summary_range <- summary(dff$Price_Range)
 
 # Summary Table
 star_wise <- dff %>%
-  group_by(stars) %>% 
-  summarise(checkins = sum(Number_of_Checkins), tips = sum(Number_of_Tips), reviews = sum(review_count))
+  group_by(stars) %>%
+  summarise(checkins = sum(Number_of_Checkins), tips = sum(Number_of_Tips),
+            reviews = sum(review_count))
