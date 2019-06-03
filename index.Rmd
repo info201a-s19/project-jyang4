@@ -14,7 +14,6 @@ source("scripts/map.R")
 yelp_df <- read.csv("data/yelp.csv", stringsAsFactors = FALSE)
 ```
 
-
 ## Purpose of the Project
 Yelp is becoming a growing platform for digital marketing. In our current day
 and age, having a effective digital presence on the internet can be vital to the
@@ -29,9 +28,7 @@ Yelp data involved. The source of our data is
 map_chart(yelp_df)
 ```
 
-
 ## Bar chart of Price Ranges in Las Vegas
 ```{r bar_chart, echo = FALSE, warnings = FALSE}
 bar_chart(yelp_df)
 ```
-
