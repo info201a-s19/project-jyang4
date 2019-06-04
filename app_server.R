@@ -1,6 +1,5 @@
 library(dplyr)
 library(plotly)
-library(ggplot2)
 
 my_server <- function(input, output) {
   yelp <- read.csv("data/yelp.csv", stringsAsFactors = FALSE)
@@ -19,11 +18,20 @@ my_server <- function(input, output) {
             hoverinfo = 'text',
             text = ~paste('</br> Restaurant: ', name,
                           '</br> Number of Check-Ins: ', Number_of_Checkins,
-                          '</br> Number of Reviews: ', review_count)) %>%
-      layout(title = 'Correlation Between Check-Ins and Reviews',
-           xaxis = list(title = 'Number of Check-Ins'),
-           yaxis = list(title = 'Review Count'),
-           showlegend = FALSE)
+                          '</br> Number of Reviews: ', review_count))
+    if(input$scale) {
+      scatter <- scatter %>% 
+        layout(title = 'Correlation Between Check-Ins and Reviews',
+               xaxis = list(title = 'Number of Check-Ins'),
+               yaxis = list(title = 'Review Count'),
+               showlegend = FALSE)
+    } else {
+      scatter <- scatter %>%
+        layout(title = 'Correlation Between Check-Ins and Reviews',
+              xaxis = list(title = 'Number of Check-Ins', range = c(0, 20000)),
+              yaxis = list(title = 'Review Count', range = c(0, 6000)),
+              showlegend = FALSE)
+    }
     
     fit <- lm(review_count ~ Number_of_Checkins, data=vegas)
     
