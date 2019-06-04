@@ -49,8 +49,6 @@ a user to zoom into a specific are and see if it is concentrated with a specific
 allows users to see where there are 1-star, 2-star, 3-star, 4-star, and 5-star businesses. In a broad scope, the map shows that a majority of businesses in 
 Las Vegas regardless of region is rated 4-star and 5-star
 
-<<<<<<< HEAD
-=======
 ## Map of Businesses with over 1000 Reviews
 ```{r top_1000_map, echo= FALSE, warnings = FALSE}
 Business_with_1000_map(yelp_df)
@@ -72,8 +70,6 @@ Vegas region. We included this to show prospective business owners on what
 the most common price level is for businesses in the area. This bar graph 
 demonstrates that a majority of restaurants were in the $11-$30 range.
 
-<<<<<<< HEAD
-=======
 ## Scatter Plot of Check-Ins Versus Reviews
 ```{r scatterplot.R, echo = FALSE, warnings = FALSE}
 scatter_plot(yelp_df)
@@ -84,7 +80,3 @@ and see if they were also leaving a review. We found that a majority of the
 people that checked in did not end up leaving a review. We wanted to include 
 this to allow prospective businesses to see if running check-in promotions 
 would increase the amount of positive reviews on their Yelp profile.
->>>>>>> d94e941a3218cc6df04ec9baee3f45712a29bfeb
-
-
->>>>>>> 987e888db95c5d9351a56bdca7431352bdb991e0
