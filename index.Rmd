@@ -50,10 +50,6 @@ allows users to see where there are 1-star, 2-star, 3-star, 4-star, and 5-star b
 Las Vegas regardless of region is rated 4-star and 5-star
 
 <<<<<<< HEAD
-## Bar chart of Price Ranges in Las Vegas
-```{r bar_chart, echo = FALSE, warnings = FALSE}
-bar_chart(yelp_df)
-```
 =======
 ## Map of Businesses with over 1000 Reviews
 ```{r top_1000_map, echo= FALSE, warnings = FALSE}
