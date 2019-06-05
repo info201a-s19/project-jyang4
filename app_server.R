@@ -182,23 +182,23 @@ my_server <- function(input, output) {
     vegas <- yelp %>%
       filter(city == "Las Vegas" & review_count > 10) %>%
       select(latitude, longitude, stars, Number_of_Checkins, name)
-    
-    if(!("1" %in% input$stars_group)) {
+
+    if (!("1" %in% input$stars_group)) {
       vegas <- vegas %>% filter(round(stars) != 1)
     }
-    if(!("2" %in% input$stars_group)) {
+    if (!("2" %in% input$stars_group)) {
       vegas <- vegas %>% filter(round(stars) != 2)
     }
-    if(!("3" %in% input$stars_group)) {
+    if (!("3" %in% input$stars_group)) {
       vegas <- vegas %>% filter(round(stars) != 3)
     }
-    if(!("4" %in% input$stars_group)) {
+    if (!("4" %in% input$stars_group)) {
       vegas <- vegas %>% filter(round(stars) != 4)
     }
-    if(!("5" %in% input$stars_group)) {
+    if (!("5" %in% input$stars_group)) {
       vegas <- vegas %>% filter(round(stars) != 5)
     }
-    
+
     stars_rounded <- vegas$stars %>%
       round()
     palette_fn <- colorFactor(palette = "Set1", domain = stars_rounded)
@@ -206,9 +206,9 @@ my_server <- function(input, output) {
       addProviderTiles("CartoDB.Positron") %>%
       setView(lng = -115.1767, lat = 36.11, zoom = 10.5) %>%
       addCircles(
-        lat = ~vegas$latitude,
-        lng = ~vegas$longitude,
-        color = ~palette_fn(stars_rounded),
+        lat = ~ vegas$latitude,
+        lng = ~ vegas$longitude,
+        color = ~ palette_fn(stars_rounded),
         radius = 20,
         fillOpacity = 0.5
       ) %>%

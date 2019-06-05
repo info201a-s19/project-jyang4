@@ -62,9 +62,14 @@ bar_chart_page <- tabPanel(
         "This interactive bar chart with the ability to change color visuals
         is used to analyze the price range of businesses in the different
         cities in Nevada, particularly the more populated ones: Las Vegas,
-        North Las Vegas, and Henderson. Business owners seeking to start a
-        business in Nevada can select different cities and see the most
-        common type of price ranges businesses falls into."
+        North Las Vegas, and Henderson. The chart can be used to select
+        among the three different cities and see the corresponding number
+        of businesses in each price range. It seeks to answer any questions
+        potential business owners might have about which price range do
+        most businesses in a certain city fall into. This chart will allow
+        business owners to make a more concrete decision on where to locate
+        their business and the socioeconomic class of customers they will be
+        encountering."
       )
     )
   )
@@ -114,7 +119,7 @@ map_page <- tabPanel(
   "Map of Ratings",
   includeCSS("styles/map_style.css"),
   titlePanel("Geographic Distribution of Different Rated Restaurants"),
-  
+
   sidebarLayout(
     sidebarPanel(
       id = "sidebar_map",
@@ -143,20 +148,6 @@ conclusion_page <- tabPanel(
   "Summary",
   includeCSS("styles/conclusion_style.css"),
   titlePanel("Summary Takeaways"),
-
-  h3("Using Price Ranges to Select a Location"),
-  p("The bar chart reveals
-    that Las Vegas has a bigger proportion of businesses above the $31
-    range seen from the greater height of the bin compared to North Las
-    Vegas and Henderson, demonstrating that most businesses appeal to
-    customers toward the upper middle-class status. North Las Vegas has
-    227 companies under $10, and 234 companies between $11-30, showing
-    how most businesses appeal towards the lower middle-class status.
-    Meanwhile, the bar chart reveals that most companies are in the
-    $11-30 in Henderson, revealing how the general area is mostly filled
-    with companies targeting the middle-class consumers. Thus, depending on
-    the target demographic and price ranges, restaurants can determine which
-    parts of the Las Vegas area will be best suited for business."),
   
   h3("The Relationship Between Check-Ins and Reviews and What That Means for
      Marketing"),
@@ -175,7 +166,24 @@ conclusion_page <- tabPanel(
     through Yelp, in order to
     increase its amount of visitors in order to attain more reviews and gain
     traction on Yelp and in the reviewing sphere in general. However, once a
-    business has attracted enough visitors, the ratings become more steady.")
+    business has attracted enough visitors, the ratings become more steady."),
+  
+  h3("Using Price Ranges to Select a Location"),
+  p("The bar chart reveals that Las Vegas has a bigger proportion of businesses
+    above the $31 range seen from the greater height of the bin compared to
+    North Las Vegas and Henderson, demonstrating that most businesses appeal to
+    customers toward the upper middle-class status. North Las Vegas has
+    227 companies under $10, and 234 companies between $11-30, showing how most
+    businesses appeal towards the lower middle-class status. Meanwhile, the bar
+    chart reveals that most companies are in the $11-30 in Henderson, revealing
+    how the general area is mostly filled with companies targeting the
+    middle-class consumers. Through analyzing the different cities and price
+    ranges, businesses that sell more luxurious items should open in Las Vegas
+    to reach their target upper middle class consumers. Businesses that have
+    products with a price range affordable to the average working class should
+    open in Henderson. Finally, businesses whose products can be affordable and
+    accessible to people with lower income should open a store in North Las
+    Vegas, reaching the lower middle class consumers.")
 )
 
 my_ui <- navbarPage(
