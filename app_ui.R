@@ -1,4 +1,45 @@
-library(plotly)
+library("shiny")
+library("plotly")
+
+bar_chart_page <- tabPanel(
+  "Price Range",
+  titlePanel("How does the Price Range of Businesses in Las Vegas Compare
+             to Other Cities in Nevada?"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        inputId = "City",
+        label = "City",
+        choice = c("Las Vegas", "North Las Vegas", "Henderson")
+      ),
+      selectInput(
+        inputId = "Color",
+        label = "Color",
+        choice = c("Blue", "Green", "Orange", "Pink", "Brown")
+      ),
+      p(
+        "This interactive bar chart with the ability to change color visuals
+        is used to analyze the price range of businesses in the different
+        cities in Nevada, particularily the more populated ones: Las Vegas,
+        North Las Vegas, and Henderson. Business owners seeking to start a
+        business in Nevada can select different cities and see the most
+        common type of price ranges businesses fall into. The bar chart reveals
+        that Las Vegas has a bigger proportion of businesses above the $31
+        range seen from the greater height of the bin compared to North Las
+        Vegas and Henderson, demonstrating that most businesses appeal to
+        customers toward the upper middle class status. North Las Vegas has
+        227 companies under $10, and 234 companies between $11-30, showing
+        how most businesses appeal towards the lower middle class status.
+        Meanwhile, the bar chart reveals that most companies are in the
+        $11-30 in Henderson, revealing how the general area is mostly filled
+        with companies targeting the middle class consumers."
+      )
+    ),
+    mainPanel(
+      plotlyOutput("bar")
+    )
+  )
+)
 
 scatterplot_page <- tabPanel(
   "Check-Ins vs. Reviews",
@@ -42,5 +83,6 @@ scatterplot_page <- tabPanel(
 
 my_ui <- navbarPage(
   "How Yelp Can Support a New Business",
-  scatterplot_page
+  scatterplot_page,
+  bar_chart_page
 )

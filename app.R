@@ -1,3 +1,7 @@
+# Final project
+library("shiny")
+library("plotly")
+
 # Executes the respective files
 source("app_ui.R")
 source("app_server.R")
