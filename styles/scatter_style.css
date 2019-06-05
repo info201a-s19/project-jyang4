@@ -1,9 +1,9 @@
-#sidebar {
+#sidebar_scatter {
   background-color: purple;
   color: white;
 }
 
-#main {
+#main_scatter {
   background-color: purple;
   color: white;
 }
@@ -14,8 +14,4 @@
 
 #rsquared {
   font-weight: bold;
-}
-
-#sidebar {
-  color: white;
 }

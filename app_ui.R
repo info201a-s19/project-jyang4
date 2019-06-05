@@ -3,9 +3,9 @@ library("plotly")
 
 intro_page <- tabPanel(
   "Introduction of Project",
-  tags$img("Yelp.png"),
+  img(src="Yelp.png"),
   titlePanel("What's Our Goal?"),
-  h4("In our current day and age,having a effective digital
+  h4("In our current day and age, having a effective digital
      presence on the internet can be vital to the success of a business. Yelp
      is a social platform that boasts 178 million monthly users. It provides
      businesses with a way to connect with their customers as well as for 
@@ -27,7 +27,7 @@ intro_page <- tabPanel(
      benefical to focus on a small area to show the biggest impact. For
      this project, we decided to focus in the region of Las Vegas, Nevada."),
   h3("In this report, you will see three charts"),
-  tags$li("Scatter Plot"),
+  tags$li("Scatter Plot of Yelp Check-Ins and Reviews"),
   tags$li("Insert Title Name"),
   tags$li("Gender difference in Occupations"),
   h3("Created by"),
@@ -85,7 +85,7 @@ scatterplot_page <- tabPanel(
   
   sidebarLayout(
     sidebarPanel(
-      id = "sidebar",
+      id = "sidebar_scatter",
       sliderInput(
         "stars",
         label = h3("Number of Stars"),
@@ -98,7 +98,7 @@ scatterplot_page <- tabPanel(
       checkboxInput("scale", "Adjust Scale According to Plot", value = FALSE)
     ),
     mainPanel(
-      id = "main",
+      id = "main_scatter",
       br(),
       plotlyOutput("reviews_scatterplot"),
       br(),
@@ -126,7 +126,18 @@ conclusion_page <- tabPanel(
   h3("The Relationship Between Check-Ins and Reviews"),
   p("When we observe the correlation between check-ins and reviews for
     different restaurants, we can see a generally consistent trend that wavers
-    depending on the rating of the restaurant.")
+    depending on the rating of the restaurant. While there isn't much of a
+    connection for lower ratings, with 1-star restaurants having an R-squared
+    as low as 0.02, the correlation is still somewhat consistent with R-squared
+    values of 0.6 or higher. It's clear that the trend is positive in all cases,
+    with more check-ins correlating to more reviews, but the magnitude of these
+    trends varies according to the ratings. More average ratings, tending
+    towards the ranges of 2-4 stars, have a typically higher coefficient in the
+    correlation whereas the outer ratings have less of an effect. Thus, unless
+    a restaurant has either unanimously awful or amazing ratings, it should try
+    to increase its marketing for Yelp in order to attain more reviews as a
+    result of more check-ins. These effects may be felt more as ratings increase
+    since this coefficient increases on either side of the ratings spectrum.")
 )
 
 my_ui <- navbarPage(
