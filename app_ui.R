@@ -13,7 +13,7 @@ intro_page <- tabPanel(
   businesses with a way to connect with their customers as well as for
   potential customers to look and gather more information into businesses.
   However, Yelp is a platform that has extensive data that can be
-  overwhleming. Our project takes a look at how businesses can use Yelp
+  overwhelming. Our project takes a look at how businesses can use Yelp
   data to become more competitive in their region against other businesses.
   This problem requires us to take a look at what other businesses are
   around the area, the average star rating, and the average price range."),
@@ -31,7 +31,7 @@ intro_page <- tabPanel(
   tags$li(class = "center_text", "Scatter Plot Between Yelp Check-Ins and
           Reviews"),
   tags$li(class = "center_text", "Bar Graph of Price Ranges"),
-  tags$li(class = "center_text", "Insert Title Name"),
+  tags$li(class = "center_text", "Map of Restaurants and Ratings"),
   h3(class = "center", "Created by"),
   tags$li(class = "center_text", "Johnny Yang"),
   tags$li(class = "center_text", "David Chiang"),
@@ -54,33 +54,24 @@ bar_chart_page <- tabPanel(
         inputId = "Color",
         label = "Color",
         choice = c("Blue", "Green", "Orange", "Pink", "Brown")
-      ),
+      )
+    ),
+    mainPanel(
+      plotlyOutput("bar"),
       p(
         "This interactive bar chart with the ability to change color visuals
         is used to analyze the price range of businesses in the different
         cities in Nevada, particularly the more populated ones: Las Vegas,
         North Las Vegas, and Henderson. Business owners seeking to start a
         business in Nevada can select different cities and see the most
-        common type of price ranges businesses falls into. The bar chart reveals
-        that Las Vegas has a bigger proportion of businesses above the $31
-        range seen from the greater height of the bin compared to North Las
-        Vegas and Henderson, demonstrating that most businesses appeal to
-        customers toward the upper middle-class status. North Las Vegas has
-        227 companies under $10, and 234 companies between $11-30, showing
-        how most businesses appeal towards the lower middle-class status.
-        Meanwhile, the bar chart reveals that most companies are in the
-        $11-30 in Henderson, revealing how the general area is mostly filled
-        with companies targeting the middle-class consumers."
+        common type of price ranges businesses falls into."
       )
-    ),
-    mainPanel(
-      plotlyOutput("bar")
     )
   )
 )
 
 scatterplot_page <- tabPanel(
-  "Check-Ins vs. Reviews",
+  "Check-Ins and Reviews",
   includeCSS("styles/scatter_style.css"),
   titlePanel("Check-Ins and Reviews - Is There a Trend?"),
 
@@ -153,7 +144,22 @@ conclusion_page <- tabPanel(
   includeCSS("styles/conclusion_style.css"),
   titlePanel("Summary Takeaways"),
 
-  h3("The Relationship Between Check-Ins and Reviews"),
+  h3("Using Price Ranges to Select a Location"),
+  p("The bar chart reveals
+    that Las Vegas has a bigger proportion of businesses above the $31
+    range seen from the greater height of the bin compared to North Las
+    Vegas and Henderson, demonstrating that most businesses appeal to
+    customers toward the upper middle-class status. North Las Vegas has
+    227 companies under $10, and 234 companies between $11-30, showing
+    how most businesses appeal towards the lower middle-class status.
+    Meanwhile, the bar chart reveals that most companies are in the
+    $11-30 in Henderson, revealing how the general area is mostly filled
+    with companies targeting the middle-class consumers. Thus, depending on
+    the target demographic and price ranges, restaurants can determine which
+    parts of the Las Vegas area will be best suited for business."),
+  
+  h3("The Relationship Between Check-Ins and Reviews and What That Means for
+     Marketing"),
   p("When we observe the correlation between check-ins and reviews for
     different restaurants, we can see a generally consistent trend that wavers
     depending on the rating of the restaurant. While there isn't much of a
@@ -165,9 +171,11 @@ conclusion_page <- tabPanel(
     towards the ranges of 2-4 stars, have a typically higher coefficient in the
     correlation whereas the outer ratings have less of an effect. Thus, unless
     a restaurant has either unanimously awful or amazing ratings, it should try
-    to increase its marketing for Yelp in order to attain more reviews as a
-    result of more check-ins. These effects may be felt more as ratings increase
-    since this coefficient increases on either side of the ratings spectrum.")
+    to invest heavily into its marketing, specifically word-of-mouth advertising
+    through Yelp, in order to
+    increase its amount of visitors in order to attain more reviews and gain
+    traction on Yelp and in the reviewing sphere in general. However, once a
+    business has attracted enough visitors, the ratings become more steady.")
 )
 
 my_ui <- navbarPage(
