@@ -1,3 +1,8 @@
+img {
+  border-radius: 10px;
+  width: 500px;
+}
+
 #sidebar {
   background-color: red;
   color: red;
@@ -8,11 +13,10 @@
   color: blue;
 }
 
-
 .center{
   margin-left: 200px;
   margin-right: 200px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .center_text{

@@ -3,7 +3,7 @@ library("plotly")
 
 intro_page <- tabPanel(
   "Introduction of Project",
-  img(src = "/Yelp.png"),
+  img(src = "/Yelp.png", class = "center"),
   includeCSS("styles/intro.css"),
   h1(class = "center", "What's Our Goal?"),
   h4(class = "center_text", "In our current day and age,having a effective digital
@@ -28,7 +28,8 @@ intro_page <- tabPanel(
      benefical to focus on a small area to show the biggest impact. For
      this project, we decided to focus in the region of Las Vegas, Nevada."),
   h3(class = "center", "In this report, you will see three charts"),
-  tags$li(class = "center_text", "Scatter Plot"),
+  tags$li(class = "center_text", "Scatter Plot Between Yelp Check-Ins and
+          Reviews"),
   tags$li(class = "center_text", "Insert Title Name"),
   tags$li(class = "center_text", "Gender difference in Occupations"),
   h3(class = "center", "Created by"),
