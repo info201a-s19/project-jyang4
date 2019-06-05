@@ -6,6 +6,14 @@
   background-color: purple;
 }
 
+#equation {
+  font-weight: bold;
+}
+
+#rsquared {
+  font-weight: bold;
+}
+
 body {
   color: white;
 }
