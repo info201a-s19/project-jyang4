@@ -81,8 +81,20 @@ scatterplot_page <- tabPanel(
   )
 )
 
+conclusion_page <- tabPanel(
+  "Summary",
+  includeCSS("styles/conclusion_style.css"),
+  titlePanel("Summary Takeaways"),
+  
+  h3("The Relationship Between Check-Ins and Reviews"),
+  p("When we observe the correlation between check-ins and reviews for
+    different restaurants, we can see a generally consistent trend that wavers
+    depending on the rating of the restaurant.")
+)
+
 my_ui <- navbarPage(
   "How Yelp Can Support a New Business",
   scatterplot_page,
-  bar_chart_page
+  bar_chart_page,
+  conclusion_page
 )
