@@ -39,42 +39,6 @@ intro_page <- tabPanel(
   tags$li(class = "center_text", "Siddharth Jayadev")
 )
 
-bar_chart_page <- tabPanel(
-  "Price Range",
-  titlePanel("How does the Price Range of Businesses in Las Vegas Compare
-             to Other Cities in Nevada?"),
-  sidebarLayout(
-    sidebarPanel(
-      selectInput(
-        inputId = "City",
-        label = "City",
-        choice = c("Las Vegas", "North Las Vegas", "Henderson")
-      ),
-      selectInput(
-        inputId = "Color",
-        label = "Color",
-        choice = c("Blue", "Green", "Orange", "Pink", "Brown")
-      )
-    ),
-    mainPanel(
-      plotlyOutput("bar"),
-      p(
-        "This interactive bar chart with the ability to change color visuals
-        is used to analyze the price range of businesses in the different
-        cities in Nevada, particularly the more populated ones: Las Vegas,
-        North Las Vegas, and Henderson. The chart can be used to select
-        among the three different cities and see the corresponding number
-        of businesses in each price range. It seeks to answer any questions
-        potential business owners might have about which price range do
-        most businesses in a certain city fall into. This chart will allow
-        business owners to make a more concrete decision on where to locate
-        their business and the socioeconomic class of customers they will be
-        encountering."
-      )
-    )
-  )
-)
-
 scatterplot_page <- tabPanel(
   "Check-Ins and Reviews",
   includeCSS("styles/scatter_style.css"),
@@ -111,6 +75,46 @@ scatterplot_page <- tabPanel(
         these metrics, restaurants can achieve a better understanding of how to
         market Yelp ratings in their restaurant to obtain more reviews and
         better reviews.")
+    )
+  )
+)
+
+bar_chart_page <- tabPanel(
+  "Price Range",
+  includeCSS("styles/bar_style.css"),
+  titlePanel("Price Range of Businesses in the Las Vegas Area"),
+  sidebarLayout(
+    sidebarPanel(
+      id = "sidebar_bar",
+      selectInput(
+        inputId = "City",
+        label = "City",
+        choice = c("Las Vegas", "North Las Vegas", "Henderson")
+      ),
+      selectInput(
+        inputId = "Color",
+        label = "Color",
+        choice = c("Blue", "Green", "Orange", "Pink", "Brown")
+      )
+    ),
+    mainPanel(
+      id = "main_bar",
+      br(),
+      plotlyOutput("bar"),
+      br(),
+      p(
+        "This interactive bar chart with the ability to change color visuals
+        is used to analyze the price range of businesses in the different
+        cities in Nevada, particularly the more populated ones: Las Vegas,
+        North Las Vegas, and Henderson. The chart can be used to select
+        among the three different cities and see the corresponding number
+        of businesses in each price range. It seeks to answer any questions
+        potential business owners might have about which price range do
+        most businesses in a certain city fall into. This chart will allow
+        business owners to make a more concrete decision on where to locate
+        their business and the socioeconomic class of customers they will be
+        encountering."
+      )
     )
   )
 )
@@ -183,7 +187,16 @@ conclusion_page <- tabPanel(
     products with a price range affordable to the average working class should
     open in Henderson. Finally, businesses whose products can be affordable and
     accessible to people with lower income should open a store in North Las
-    Vegas, reaching the lower middle class consumers.")
+    Vegas, reaching the lower middle class consumers."),
+  
+  h3("Finding the Optimal Locations for Best Ratings"),
+  p("When we observe the 4- and 5-star rated restaurants in the Las Vegas area,
+    we'll notice that the majority of highest-rated restaurants are located in
+    the hotspots of the city, namely the Strip. Meanwhile, lower rated
+    restaurants, specifically those with 1-star ratings, were more scattered
+    around the area. Thus, for a new business, location is extremely important,
+    with more traffic and popular, reputable sites typically leading to higher
+    ratings in general.")
 )
 
 my_ui <- navbarPage(

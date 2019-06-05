@@ -84,7 +84,7 @@ my_server <- function(input, output) {
       )
     ) %>%
       layout(
-        title = "Number of Businesses in each Price Range in a Given City in Nevada",
+        title = "Number of Businesses in Each Price Range",
         xaxis = list(title = "Price Range"),
         yaxis = list(title = "Number of Businesses"),
         showlegend = FALSE

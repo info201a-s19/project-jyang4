@@ -3,16 +3,6 @@ img {
   width: 500px;
 }
 
-#sidebar {
-  background-color: red;
-  color: red;
-}
-
-#main {
-  background-color: red;
-  color: blue;
-}
-
 .center{
   margin-left: 200px;
   margin-right: 200px;
@@ -23,4 +13,3 @@ img {
   margin-left: 200px;
   margin-right: 200px;
 }
-
