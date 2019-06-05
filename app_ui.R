@@ -36,7 +36,6 @@ intro_page <- tabPanel(
   tags$li(class = "center_text", "David Chiang"),
   tags$li(class = "center_text", "Justin Bao"),
   tags$li(class = "center_text", "Siddharth Jayadev")
-  
   )
 
 bar_chart_page <- tabPanel(
@@ -86,7 +85,7 @@ scatterplot_page <- tabPanel(
   
   sidebarLayout(
     sidebarPanel(
-      id = "sidebar",
+      id = "sidebar_scatter",
       sliderInput(
         "stars",
         label = h3("Number of Stars"),
@@ -99,7 +98,7 @@ scatterplot_page <- tabPanel(
       checkboxInput("scale", "Adjust Scale According to Plot", value = FALSE)
     ),
     mainPanel(
-      id = "main",
+      id = "main_scatter",
       br(),
       plotlyOutput("reviews_scatterplot"),
       br(),
@@ -127,7 +126,18 @@ conclusion_page <- tabPanel(
   h3("The Relationship Between Check-Ins and Reviews"),
   p("When we observe the correlation between check-ins and reviews for
     different restaurants, we can see a generally consistent trend that wavers
-    depending on the rating of the restaurant.")
+    depending on the rating of the restaurant. While there isn't much of a
+    connection for lower ratings, with 1-star restaurants having an R-squared
+    as low as 0.02, the correlation is still somewhat consistent with R-squared
+    values of 0.6 or higher. It's clear that the trend is positive in all cases,
+    with more check-ins correlating to more reviews, but the magnitude of these
+    trends varies according to the ratings. More average ratings, tending
+    towards the ranges of 2-4 stars, have a typically higher coefficient in the
+    correlation whereas the outer ratings have less of an effect. Thus, unless
+    a restaurant has either unanimously awful or amazing ratings, it should try
+    to increase its marketing for Yelp in order to attain more reviews as a
+    result of more check-ins. These effects may be felt more as ratings increase
+    since this coefficient increases on either side of the ratings spectrum.")
 )
 
 my_ui <- navbarPage(
