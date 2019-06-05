@@ -7,38 +7,37 @@ intro_page <- tabPanel(
   img(src = "/Yelp.png", class = "center"),
   includeCSS("styles/intro.css"),
   h1(class = "center", "What's Our Goal?"),
-  h4(class = "center_text", "In our current day and age,having a effective digital
-     presence on the internet can be vital to the success of a business. Yelp
-     is a social platform that boasts 178 million monthly users. It provides
-     businesses with a way to connect with their customers as well as for 
-     potential customers to look and gather more information into businesses. 
-     However, Yelp is a platform that has extensive data that can be 
-     overwhleming. Our project takes a look at how businesses can use Yelp 
-     data to become more competitive in their region against other businesses. 
-     This problem requires us to take a look at what other businesses are
-     around the area, the average star rating, and the average price range.
-     "),
+  h4(class = "center_text", "In our current day and age, having an effective
+  digital presence on the internet can be vital to the success of a business.
+  Yelp is a social platform that boasts 178 million monthly users. It provides
+  businesses with a way to connect with their customers as well as for
+  potential customers to look and gather more information into businesses.
+  However, Yelp is a platform that has extensive data that can be
+  overwhleming. Our project takes a look at how businesses can use Yelp
+  data to become more competitive in their region against other businesses.
+  This problem requires us to take a look at what other businesses are
+  around the area, the average star rating, and the average price range."),
   h1(class = "center", "What Data Are We Using?"),
   h4(class = "center_text", "In order to answer this question, we will be using
-     the Yelp
-     and the Yelp API Data based in R. The Yelp Data Set gave us all the 
-     information that Yelp collects from their members. Through the data, we
-     will be creating interactive graphs and visualizations that would benefit
-     new and current business owners.Since the Yelp Data Set is particularly large and
-     spans across the continental United States, we thought it would 
-     benefical to focus on a small area to show the biggest impact. For
-     this project, we decided to focus in the region of Las Vegas, Nevada."),
+     the Yelp and the Yelp API Data based in R. The Yelp Data Set gave us all
+     the information that Yelp collects from their members. Through the data,
+     we will be creating interactive graphs and visualizations that would
+     benefit new and current business owners.Since the Yelp Data Set is
+     particularly large and spans across the continental United States, we
+     thought it would benefical to focus on a small area to show the biggest
+     impact. For this project, we decided to focus in the region of Las Vegas,
+     Nevada."),
   h3(class = "center", "In this report, you will see three charts"),
   tags$li(class = "center_text", "Scatter Plot Between Yelp Check-Ins and
           Reviews"),
+  tags$li(class = "center_text", "Bar Graph of Price Ranges"),
   tags$li(class = "center_text", "Insert Title Name"),
-  tags$li(class = "center_text", "Gender difference in Occupations"),
   h3(class = "center", "Created by"),
   tags$li(class = "center_text", "Johnny Yang"),
   tags$li(class = "center_text", "David Chiang"),
   tags$li(class = "center_text", "Justin Bao"),
   tags$li(class = "center_text", "Siddharth Jayadev")
-  )
+)
 
 bar_chart_page <- tabPanel(
   "Price Range",
@@ -59,19 +58,19 @@ bar_chart_page <- tabPanel(
       p(
         "This interactive bar chart with the ability to change color visuals
         is used to analyze the price range of businesses in the different
-        cities in Nevada, particularily the more populated ones: Las Vegas,
+        cities in Nevada, particularly the more populated ones: Las Vegas,
         North Las Vegas, and Henderson. Business owners seeking to start a
         business in Nevada can select different cities and see the most
-        common type of price ranges businesses fall into. The bar chart reveals
+        common type of price ranges businesses falls into. The bar chart reveals
         that Las Vegas has a bigger proportion of businesses above the $31
         range seen from the greater height of the bin compared to North Las
         Vegas and Henderson, demonstrating that most businesses appeal to
-        customers toward the upper middle class status. North Las Vegas has
+        customers toward the upper middle-class status. North Las Vegas has
         227 companies under $10, and 234 companies between $11-30, showing
-        how most businesses appeal towards the lower middle class status.
+        how most businesses appeal towards the lower middle-class status.
         Meanwhile, the bar chart reveals that most companies are in the
         $11-30 in Henderson, revealing how the general area is mostly filled
-        with companies targeting the middle class consumers."
+        with companies targeting the middle-class consumers."
       )
     ),
     mainPanel(
@@ -84,7 +83,7 @@ scatterplot_page <- tabPanel(
   "Check-Ins vs. Reviews",
   includeCSS("styles/scatter_style.css"),
   titlePanel("Check-Ins and Reviews - Is There a Trend?"),
-  
+
   sidebarLayout(
     sidebarPanel(
       id = "sidebar_scatter",
@@ -153,7 +152,7 @@ conclusion_page <- tabPanel(
   "Summary",
   includeCSS("styles/conclusion_style.css"),
   titlePanel("Summary Takeaways"),
-  
+
   h3("The Relationship Between Check-Ins and Reviews"),
   p("When we observe the correlation between check-ins and reviews for
     different restaurants, we can see a generally consistent trend that wavers
@@ -162,7 +161,7 @@ conclusion_page <- tabPanel(
     as low as 0.02, the correlation is still somewhat consistent with R-squared
     values of 0.6 or higher. It's clear that the trend is positive in all cases,
     with more check-ins correlating to more reviews, but the magnitude of these
-    trends varies according to the ratings. More average ratings, tending
+    trends vary according to the ratings. More average ratings, tending
     towards the ranges of 2-4 stars, have a typically higher coefficient in the
     correlation whereas the outer ratings have less of an effect. Thus, unless
     a restaurant has either unanimously awful or amazing ratings, it should try
