@@ -22,9 +22,9 @@ intro_page <- tabPanel(
      the Yelp and the Yelp API Data based in R. The Yelp Data Set gave us all
      the information that Yelp collects from their members. Through the data,
      we will be creating interactive graphs and visualizations that would
-     benefit new and current business owners.Since the Yelp Data Set is
+     benefit new and current business owners. Since the Yelp Data Set is
      particularly large and spans across the continental United States, we
-     thought it would benefical to focus on a small area to show the biggest
+     thought it would beneficial to focus on a small area to show the biggest
      impact. For this project, we decided to focus in the region of Las Vegas,
      Nevada."),
   h3(class = "center", "In this report, you will see three charts"),
