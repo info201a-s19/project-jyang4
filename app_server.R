@@ -2,6 +2,7 @@ library("dplyr")
 library("plotly")
 library("shiny")
 library("tidyr")
+library("leaflet")
 
 yelp <- read.csv("data/yelp.csv", stringsAsFactors = FALSE)
 
@@ -141,5 +142,49 @@ my_server <- function(input, output) {
              format(round(summary(linearMod)$r.squared, 2), nsmall = 2)
       )
     }
+  })
+  
+  output$ratings_map <- renderLeaflet({
+    vegas <- yelp %>%
+      filter(city == "Las Vegas" & review_count > 10) %>%
+      select(latitude, longitude, stars, Number_of_Checkins, name)
+    
+    if(!("1" %in% input$stars_group)) {
+      vegas <- vegas %>% filter(round(stars) != 1)
+    }
+    if(!("2" %in% input$stars_group)) {
+      vegas <- vegas %>% filter(round(stars) != 2)
+    }
+    if(!("3" %in% input$stars_group)) {
+      vegas <- vegas %>% filter(round(stars) != 3)
+    }
+    if(!("4" %in% input$stars_group)) {
+      vegas <- vegas %>% filter(round(stars) != 4)
+    }
+    if(!("5" %in% input$stars_group)) {
+      vegas <- vegas %>% filter(round(stars) != 5)
+    }
+    
+    stars_rounded <- vegas$stars %>%
+      round()
+    palette_fn <- colorFactor(palette = "Set1", domain = stars_rounded)
+    map_of_vegas <- leaflet(data = vegas) %>%
+      addProviderTiles("CartoDB.Positron") %>%
+      setView(lng = -115.1767, lat = 36.11, zoom = 10.5) %>%
+      addCircles(
+        lat = ~vegas$latitude,
+        lng = ~vegas$longitude,
+        color = ~palette_fn(stars_rounded),
+        radius = 20,
+        fillOpacity = 0.5
+      ) %>%
+      addLegend(
+        position = "bottomright",
+        title = "Star Ratings in Las Vegas",
+        pal = palette_fn, # the palette to label
+        values = ~stars_rounded, # the values to label
+        opacity = 1
+      )
+    map_of_vegas
   })
 }

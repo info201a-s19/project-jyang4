@@ -1,5 +1,6 @@
 library("shiny")
 library("plotly")
+library("leaflet")
 
 intro_page <- tabPanel(
   "Introduction of Project",
@@ -119,6 +120,35 @@ scatterplot_page <- tabPanel(
   )
 )
 
+map_page <- tabPanel(
+  "Map of Ratings",
+  includeCSS("styles/map_style.css"),
+  titlePanel("Geographic Distribution of Different Rated Restaurants"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      id = "sidebar_map",
+      checkboxGroupInput(
+        "stars_group",
+        label = h3("Number of Stars"),
+        choices = list(1, 2, 3, 4, 5),
+        selected = list(1, 2, 3, 4, 5)
+      )
+    ),
+    mainPanel(
+      id = "main_map",
+      br(),
+      leafletOutput("ratings_map"),
+      br(),
+      p("This interactive map allows us to view the geographic distribution of
+        restaurants in the Las Vegas area. The color-coded legend and the
+        widget on the left allow us to sort the points on the map by Yelp rating
+        for a visual representation of the best (and worst) rated restaurants
+        and what areas tend to have certain ratings.")
+    )
+  )
+)
+
 conclusion_page <- tabPanel(
   "Summary",
   includeCSS("styles/conclusion_style.css"),
@@ -146,5 +176,6 @@ my_ui <- navbarPage(
   intro_page,
   scatterplot_page,
   bar_chart_page,
+  map_page,
   conclusion_page
 )
