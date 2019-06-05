@@ -6,27 +6,26 @@ intro_page <- tabPanel(
   img(src = "/Yelp.png", class = "center"),
   includeCSS("styles/intro.css"),
   h1(class = "center", "What's Our Goal?"),
-  h4(class = "center_text", "In our current day and age,having a effective digital
-     presence on the internet can be vital to the success of a business. Yelp
-     is a social platform that boasts 178 million monthly users. It provides
-     businesses with a way to connect with their customers as well as for 
-     potential customers to look and gather more information into businesses. 
-     However, Yelp is a platform that has extensive data that can be 
-     overwhleming. Our project takes a look at how businesses can use Yelp 
-     data to become more competitive in their region against other businesses. 
-     This problem requires us to take a look at what other businesses are
-     around the area, the average star rating, and the average price range.
-     "),
+  h4(class = "center_text", "In our current day and age, having an effective
+  digital presence on the internet can be vital to the success of a business.
+  Yelp is a social platform that boasts 178 million monthly users. It provides
+  businesses with a way to connect with their customers as well as for
+  potential customers to look and gather more information into businesses.
+  However, Yelp is a platform that has extensive data that can be
+  overwhleming. Our project takes a look at how businesses can use Yelp
+  data to become more competitive in their region against other businesses.
+  This problem requires us to take a look at what other businesses are
+  around the area, the average star rating, and the average price range."),
   h1(class = "center", "What Data Are We Using?"),
   h4(class = "center_text", "In order to answer this question, we will be using
-     the Yelp
-     and the Yelp API Data based in R. The Yelp Data Set gave us all the 
-     information that Yelp collects from their members. Through the data, we
-     will be creating interactive graphs and visualizations that would benefit
-     new and current business owners.Since the Yelp Data Set is particularly large and
-     spans across the continental United States, we thought it would 
-     benefical to focus on a small area to show the biggest impact. For
-     this project, we decided to focus in the region of Las Vegas, Nevada."),
+     the Yelp and the Yelp API Data based in R. The Yelp Data Set gave us all
+     the information that Yelp collects from their members. Through the data,
+     we will be creating interactive graphs and visualizations that would
+     benefit new and current business owners.Since the Yelp Data Set is
+     particularly large and spans across the continental United States, we
+     thought it would benefical to focus on a small area to show the biggest
+     impact. For this project, we decided to focus in the region of Las Vegas,
+     Nevada."),
   h3(class = "center", "In this report, you will see three charts"),
   tags$li(class = "center_text", "Scatter Plot Between Yelp Check-Ins and
           Reviews"),
@@ -37,7 +36,7 @@ intro_page <- tabPanel(
   tags$li(class = "center_text", "David Chiang"),
   tags$li(class = "center_text", "Justin Bao"),
   tags$li(class = "center_text", "Siddharth Jayadev")
-  )
+)
 
 bar_chart_page <- tabPanel(
   "Price Range",
@@ -83,7 +82,7 @@ scatterplot_page <- tabPanel(
   "Check-Ins vs. Reviews",
   includeCSS("styles/scatter_style.css"),
   titlePanel("Check-Ins and Reviews - Is There a Trend?"),
-  
+
   sidebarLayout(
     sidebarPanel(
       id = "sidebar_scatter",
@@ -123,7 +122,7 @@ conclusion_page <- tabPanel(
   "Summary",
   includeCSS("styles/conclusion_style.css"),
   titlePanel("Summary Takeaways"),
-  
+
   h3("The Relationship Between Check-Ins and Reviews"),
   p("When we observe the correlation between check-ins and reviews for
     different restaurants, we can see a generally consistent trend that wavers
