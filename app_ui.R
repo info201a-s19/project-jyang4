@@ -29,8 +29,8 @@ intro_page <- tabPanel(
   h3(class = "center", "In this report, you will see three charts"),
   tags$li(class = "center_text", "Scatter Plot Between Yelp Check-Ins and
           Reviews"),
+  tags$li(class = "center_text", "Bar Graph of Price Ranges"),
   tags$li(class = "center_text", "Insert Title Name"),
-  tags$li(class = "center_text", "Gender difference in Occupations"),
   h3(class = "center", "Created by"),
   tags$li(class = "center_text", "Johnny Yang"),
   tags$li(class = "center_text", "David Chiang"),
@@ -57,19 +57,19 @@ bar_chart_page <- tabPanel(
       p(
         "This interactive bar chart with the ability to change color visuals
         is used to analyze the price range of businesses in the different
-        cities in Nevada, particularily the more populated ones: Las Vegas,
+        cities in Nevada, particularly the more populated ones: Las Vegas,
         North Las Vegas, and Henderson. Business owners seeking to start a
         business in Nevada can select different cities and see the most
-        common type of price ranges businesses fall into. The bar chart reveals
+        common type of price ranges businesses falls into. The bar chart reveals
         that Las Vegas has a bigger proportion of businesses above the $31
         range seen from the greater height of the bin compared to North Las
         Vegas and Henderson, demonstrating that most businesses appeal to
-        customers toward the upper middle class status. North Las Vegas has
+        customers toward the upper middle-class status. North Las Vegas has
         227 companies under $10, and 234 companies between $11-30, showing
-        how most businesses appeal towards the lower middle class status.
+        how most businesses appeal towards the lower middle-class status.
         Meanwhile, the bar chart reveals that most companies are in the
         $11-30 in Henderson, revealing how the general area is mostly filled
-        with companies targeting the middle class consumers."
+        with companies targeting the middle-class consumers."
       )
     ),
     mainPanel(
@@ -131,7 +131,7 @@ conclusion_page <- tabPanel(
     as low as 0.02, the correlation is still somewhat consistent with R-squared
     values of 0.6 or higher. It's clear that the trend is positive in all cases,
     with more check-ins correlating to more reviews, but the magnitude of these
-    trends varies according to the ratings. More average ratings, tending
+    trends vary according to the ratings. More average ratings, tending
     towards the ranges of 2-4 stars, have a typically higher coefficient in the
     correlation whereas the outer ratings have less of an effect. Thus, unless
     a restaurant has either unanimously awful or amazing ratings, it should try
