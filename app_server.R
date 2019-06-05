@@ -19,18 +19,20 @@ my_server <- function(input, output) {
             text = ~paste('</br> Restaurant: ', name,
                           '</br> Number of Check-Ins: ', Number_of_Checkins,
                           '</br> Number of Reviews: ', review_count))
+    
+    scatter <- scatter %>% 
+      layout(title = 'Correlation Between Check-Ins and Reviews',
+             showlegend = FALSE)
+    
     if(input$scale) {
       scatter <- scatter %>% 
-        layout(title = 'Correlation Between Check-Ins and Reviews',
-               xaxis = list(title = 'Number of Check-Ins'),
-               yaxis = list(title = 'Review Count'),
-               showlegend = FALSE)
+        layout(xaxis = list(title = 'Number of Check-Ins'),
+               yaxis = list(title = 'Review Count'))
     } else {
       scatter <- scatter %>%
-        layout(title = 'Correlation Between Check-Ins and Reviews',
-              xaxis = list(title = 'Number of Check-Ins', range = c(0, 20000)),
-              yaxis = list(title = 'Review Count', range = c(0, 6000)),
-              showlegend = FALSE)
+        layout(
+          xaxis = list(title = 'Number of Check-Ins', range = c(0, 20000)),
+          yaxis = list(title = 'Review Count', range = c(0, 6000)))
     }
     
     fit <- lm(review_count ~ Number_of_Checkins, data=vegas)
