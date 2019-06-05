@@ -3,9 +3,10 @@ library("plotly")
 
 intro_page <- tabPanel(
   "Introduction of Project",
-  tags$img("Yelp.png"),
-  titlePanel("What's Our Goal?"),
-  h4("In our current day and age,having a effective digital
+  img(src = "/Yelp.png"),
+  includeCSS("styles/intro.css"),
+  h1(class = "center", "What's Our Goal?"),
+  h4(class = "center_text", "In our current day and age,having a effective digital
      presence on the internet can be vital to the success of a business. Yelp
      is a social platform that boasts 178 million monthly users. It provides
      businesses with a way to connect with their customers as well as for 
@@ -16,8 +17,8 @@ intro_page <- tabPanel(
      This problem requires us to take a look at what other businesses are
      around the area, the average star rating, and the average price range.
      "),
-  titlePanel("What Data Are We Using?"),
-  h4("In order to answer this question, we will be using
+  h1(class = "center", "What Data Are We Using?"),
+  h4(class = "center_text", "In order to answer this question, we will be using
      the Yelp
      and the Yelp API Data based in R. The Yelp Data Set gave us all the 
      information that Yelp collects from their members. Through the data, we
@@ -26,15 +27,15 @@ intro_page <- tabPanel(
      spans across the continental United States, we thought it would 
      benefical to focus on a small area to show the biggest impact. For
      this project, we decided to focus in the region of Las Vegas, Nevada."),
-  h3("In this report, you will see three charts"),
-  tags$li("Scatter Plot"),
-  tags$li("Insert Title Name"),
-  tags$li("Gender difference in Occupations"),
-  h3("Created by"),
-  tags$li("Johnny Yang"),
-  tags$li("David Chiang"),
-  tags$li("Justin Bao"),
-  tags$li("Siddharth Jayadev")
+  h3(class = "center", "In this report, you will see three charts"),
+  tags$li(class = "center_text", "Scatter Plot"),
+  tags$li(class = "center_text", "Insert Title Name"),
+  tags$li(class = "center_text", "Gender difference in Occupations"),
+  h3(class = "center", "Created by"),
+  tags$li(class = "center_text", "Johnny Yang"),
+  tags$li(class = "center_text", "David Chiang"),
+  tags$li(class = "center_text", "Justin Bao"),
+  tags$li(class = "center_text", "Siddharth Jayadev")
   
   )
 
