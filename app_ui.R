@@ -4,7 +4,7 @@ library("leaflet")
 
 intro_page <- tabPanel(
   "Introduction of Project",
-  img(src = "/Yelp.png", class = "center"),
+  img(src = "Yelp.png", class = "center"),
   includeCSS("styles/intro.css"),
   h1(class = "center", "What's Our Goal?"),
   h4(class = "center_text", "In our current day and age, having an effective
@@ -152,7 +152,7 @@ conclusion_page <- tabPanel(
   "Summary",
   includeCSS("styles/conclusion_style.css"),
   titlePanel("Summary Takeaways"),
-  
+
   h3("The Relationship Between Check-Ins and Reviews and What That Means for
      Marketing"),
   p("When we observe the correlation between check-ins and reviews for
@@ -171,7 +171,7 @@ conclusion_page <- tabPanel(
     increase its amount of visitors in order to attain more reviews and gain
     traction on Yelp and in the reviewing sphere in general. However, once a
     business has attracted enough visitors, the ratings become more steady."),
-  
+
   h3("Using Price Ranges to Select a Location"),
   p("The bar chart reveals that Las Vegas has a bigger proportion of businesses
     above the $31 range seen from the greater height of the bin compared to
@@ -188,7 +188,7 @@ conclusion_page <- tabPanel(
     open in Henderson. Finally, businesses whose products can be affordable and
     accessible to people with lower income should open a store in North Las
     Vegas, reaching the lower middle class consumers."),
-  
+
   h3("Finding the Optimal Locations for Best Ratings"),
   p("When we observe the 4- and 5-star rated restaurants in the Las Vegas area,
     we'll notice that the majority of highest-rated restaurants are located in

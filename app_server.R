@@ -151,12 +151,12 @@ my_server <- function(input, output) {
         filter(city == "Las Vegas") %>%
         select(review_count, Number_of_Checkins, stars) %>%
         filter(stars == input$stars)
-      linearMod <- lm(review_count ~ Number_of_Checkins, data = vegas)
+      linear_mod <- lm(review_count ~ Number_of_Checkins, data = vegas)
       paste0(
         "Reviews = ",
-        format(round(coef(linearMod)["(Intercept)"], 2), nsmall = 2),
+        format(round(coef(linear_mod)["(Intercept)"], 2), nsmall = 2),
         " + ",
-        format(round(coef(linearMod)["Number_of_Checkins"], 2),
+        format(round(coef(linear_mod)["Number_of_Checkins"], 2),
           nsmall = 2
         ),
         " x Check-Ins"
@@ -170,10 +170,10 @@ my_server <- function(input, output) {
         filter(city == "Las Vegas") %>%
         select(review_count, Number_of_Checkins, stars) %>%
         filter(stars == input$stars)
-      linearMod <- lm(review_count ~ Number_of_Checkins, data = vegas)
+      linear_mod <- lm(review_count ~ Number_of_Checkins, data = vegas)
       paste0(
         "R-squared: ",
-        format(round(summary(linearMod)$r.squared, 2), nsmall = 2)
+        format(round(summary(linear_mod)$r.squared, 2), nsmall = 2)
       )
     }
   })
