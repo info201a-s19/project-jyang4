@@ -1,6 +1,43 @@
 library("shiny")
 library("plotly")
 
+intro_page <- tabPanel(
+  "Introduction of Project",
+  tags$img("Yelp.png"),
+  titlePanel("What's Our Goal?"),
+  h4("In our current day and age,having a effective digital
+     presence on the internet can be vital to the success of a business. Yelp
+     is a social platform that boasts 178 million monthly users. It provides
+     businesses with a way to connect with their customers as well as for 
+     potential customers to look and gather more information into businesses. 
+     However, Yelp is a platform that has extensive data that can be 
+     overwhleming. Our project takes a look at how businesses can use Yelp 
+     data to become more competitive in their region against other businesses. 
+     This problem requires us to take a look at what other businesses are
+     around the area, the average star rating, and the average price range.
+     "),
+  titlePanel("What Data Are We Using?"),
+  h4("In order to answer this question, we will be using
+     the Yelp
+     and the Yelp API Data based in R. The Yelp Data Set gave us all the 
+     information that Yelp collects from their members. Through the data, we
+     will be creating interactive graphs and visualizations that would benefit
+     new and current business owners.Since the Yelp Data Set is particularly large and
+     spans across the continental United States, we thought it would 
+     benefical to focus on a small area to show the biggest impact. For
+     this project, we decided to focus in the region of Las Vegas, Nevada."),
+  h3("In this report, you will see three charts"),
+  tags$li("Scatter Plot"),
+  tags$li("Insert Title Name"),
+  tags$li("Gender difference in Occupations"),
+  h3("Created by"),
+  tags$li("Johnny Yang"),
+  tags$li("David Chiang"),
+  tags$li("Justin Bao"),
+  tags$li("Siddharth Jayadev")
+  
+  )
+
 bar_chart_page <- tabPanel(
   "Price Range",
   titlePanel("How does the Price Range of Businesses in Las Vegas Compare
@@ -94,6 +131,7 @@ conclusion_page <- tabPanel(
 
 my_ui <- navbarPage(
   "How Yelp Can Support a New Business",
+  intro_page,
   scatterplot_page,
   bar_chart_page,
   conclusion_page
