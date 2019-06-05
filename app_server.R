@@ -126,7 +126,7 @@ my_server <- function(input, output) {
              " + ", 
              format(round(coef(linearMod)["Number_of_Checkins"], 2), 
                     nsmall = 2),
-             "*Check-Ins"
+             " x Check-Ins"
       )
     }
   })

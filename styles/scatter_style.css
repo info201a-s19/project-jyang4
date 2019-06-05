@@ -4,6 +4,7 @@
 
 #main {
   background-color: purple;
+  color: white;
 }
 
 #equation {
@@ -14,10 +15,6 @@
   font-weight: bold;
 }
 
-body {
+#sidebar {
   color: white;
-}
-
-h2 {
-  color: purple;
 }
