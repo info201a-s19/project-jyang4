@@ -120,7 +120,7 @@ map_page <- tabPanel(
   "Map of Ratings",
   includeCSS("styles/map_style.css"),
   titlePanel("Geographic Distribution of Different Rated Restaurants"),
-  
+
   sidebarLayout(
     sidebarPanel(
       id = "sidebar_map",
@@ -166,20 +166,20 @@ conclusion_page <- tabPanel(
     result of more check-ins. These effects may be felt more as ratings increase
     since this coefficient increases on either side of the ratings spectrum."),
   p("The bar chart reveals that Las Vegas has a bigger proportion of businesses
-      above the $31 range seen from the greater height of the bin compared to North
-      Las Vegas and Henderson, demonstrating that most businesses appeal to
-      customers toward the upper middle-class status. North Las Vegas has
-      227 companies under $10, and 234 companies between $11-30, showing how most
-      businesses appeal towards the lower middle-class status. Meanwhile, the bar
-      chart reveals that most companies are in the $11-30 in Henderson, revealing
-      how the general area is mostly filled with companies targeting the
-      middle-class consumers. Through analyzing the different cities and price
-      ranges, businesses that sell more luxurious items should open in Las Vegas
-      to reach their target upper middle class consumers. Businesses that have
-      products with a price range affordable to the average working class should
-      open in Henderson. Finally, businesses whose products can be affordable and
-      accessible to people with lower income should open a store in North Las
-      Vegas, reaching the lower middle class consumers.")
+    above the $31 range seen from the greater height of the bin compared to
+    North Las Vegas and Henderson, demonstrating that most businesses appeal to
+    customers toward the upper middle-class status. North Las Vegas has
+    227 companies under $10, and 234 companies between $11-30, showing how most
+    businesses appeal towards the lower middle-class status. Meanwhile, the bar
+    chart reveals that most companies are in the $11-30 in Henderson, revealing
+    how the general area is mostly filled with companies targeting the
+    middle-class consumers. Through analyzing the different cities and price
+    ranges, businesses that sell more luxurious items should open in Las Vegas
+    to reach their target upper middle class consumers. Businesses that have
+    products with a price range affordable to the average working class should
+    open in Henderson. Finally, businesses whose products can be affordable and
+    accessible to people with lower income should open a store in North Las
+    Vegas, reaching the lower middle class consumers.")
 )
 
 my_ui <- navbarPage(
