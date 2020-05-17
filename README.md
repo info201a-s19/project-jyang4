@@ -2,6 +2,7 @@
 
 ### Project Description
 
+
 ![Yelp Logo](www/Yelp.png)
 
 Our goal for the Yelp Data Project was to transform the
@@ -45,3 +46,5 @@ Some of the challenges we faced:
 2. Seeing that the Las Vegas region had three different cities, so we had to
 include all three cities when data wrangling
 3. Having trouble decide what insights to get from such a large, broad data-set.
+
+[Project Link](https://dchiang00.shinyapps.io/project-jyang4/?fbclid=IwAR0X40FlQPAoiyoh4OpNWJM3LwTQuCBsfFWPczj1uq_Yx6FRTilW4a6oV-M)
